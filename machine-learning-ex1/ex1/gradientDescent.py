@@ -16,6 +16,13 @@ def gradient_descent(X, y, theta, alpha, num_iters):
 
         # ===========================================================
         # Save the cost every iteration
+        sum=0
+        for i in range(y.size):
+            h = np.dot(X[i],np.transpose(theta))
+            sum += (h-y[i])*X[i]
+        sum = sum/m
+        theta -= alpha*sum
+        #print(compute_cost(X, y, theta))
         J_history[i] = compute_cost(X, y, theta)
 
     return theta, J_history
