@@ -1,5 +1,5 @@
 # CS229 Machine Learning Assignments in Python
-# Assignments Taken from this page Solutions from author in folder titled leanring511Solutions, all other solutions mine
+# Assignments Taken from this page Solutions from author in folder titled Solutions, Solutions in Alex Solutions are Mine
 [![Assignment-author](https://img.shields.io/badge/author-nsoojin-red.svg)](https://www.linkedin.com/in/soojinro) [![python](https://img.shields.io/badge/python-3.6-blue.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]() [![contribution](https://img.shields.io/badge/contribution-welcome-brightgreen.svg)]()
 
 ![title_image](title_image.png)
