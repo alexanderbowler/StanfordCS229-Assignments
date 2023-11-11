@@ -37,8 +37,9 @@ def gradient_descent_multi(X, y, theta, alpha, num_iters):
         # ===================== Your Code Here =====================
         # Instructions : Perform a single gradient step on the parameter vector theta
         #
-
-
+        h=np.dot(X,np.transpose(theta))
+        hy = np.array(h-y)[np.newaxis]
+        theta -= alpha*1/m*np.sum((np.transpose(hy))*X,axis=0)
         # ===========================================================
         # Save the cost every iteration
         J_history[i] = compute_cost(X, y, theta)

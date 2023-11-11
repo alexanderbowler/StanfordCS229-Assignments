@@ -50,8 +50,8 @@ X = np.c_[np.ones(m), X]  # Add a column of ones to X
 print('Running gradient descent ...')
 
 # Choose some alpha value
-alpha = 0.03
-num_iters = 400
+alpha = 0.4
+num_iters = 50
 
 # Init theta and Run Gradient Descent
 theta = np.zeros(3)
@@ -70,7 +70,8 @@ print('Theta computed from gradient descent : \n{}'.format(theta))
 # ===================== Your Code Here =====================
 # Recall that the first column of X is all-ones. Thus, it does
 # not need to be normalized.
-price = 0  # You should change this
+#print(theta.shape)
+price = np.dot(np.array([1,(1650.0-mu[0])/sigma[0],(3.0-mu[1])/sigma[1]]),theta)  # You should change this
 
 
 # ==========================================================
@@ -109,7 +110,7 @@ print('Theta computed from the normal equations : \n{}'.format(theta))
 
 # Estimate the price of a 1650 sq-ft, 3 br house
 # ===================== Your Code Here =====================
-price = 0  # You should change this
+price = np.dot(np.array([1,1650,3]),theta) # You should change this
 
 
 # ==========================================================

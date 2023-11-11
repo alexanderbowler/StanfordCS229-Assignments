@@ -4,7 +4,7 @@ import numpy as np
 def feature_normalize(X):
     # You need to set these values correctly
     n = X.shape[1]  # the number of features
-    X_norm = X
+    X_norm = np.empty(X.shape,dtype=float)
     mu = np.zeros(n)
     sigma = np.zeros(n)
 
@@ -29,4 +29,9 @@ def feature_normalize(X):
 
     # ===========================================================
 
+    np.mean(X,axis=0,out=mu, dtype = np.float64)
+    np.std(X,axis=0,out=sigma,dtype = np.float64)
+    for i in range(n):
+        X_norm[:,i] = (X[:,i]-mu[i])/sigma[i]
+    #print(X_norm)
     return X_norm, mu, sigma
