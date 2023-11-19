@@ -31,6 +31,8 @@ input('Program paused. Press ENTER to continue')
 # for logistic regression. You need to complete the code in
 # costFunction.py
 
+
+
 # Setup the data array appropriately, and add ones for the intercept term
 (m, n) = X.shape
 
@@ -106,6 +108,7 @@ input('Program paused. Press ENTER to continue')
 prob = sigmoid(np.array([1, 45, 85]).dot(theta))
 print('For a student with scores 45 and 85, we predict an admission probability of {:0.4f}'.format(prob))
 print('Expected value : 0.775 +/- 0.002')
+print('Actual value', prob)
 
 # Compute the accuracy on our training set
 p = predict.predict(theta, X)

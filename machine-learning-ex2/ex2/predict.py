@@ -16,5 +16,9 @@ def predict(theta, X):
 
 
     # ===========================================================
+    #print(sigmoid(X.dot(theta)))
+    p = np.where(sigmoid(X.dot(theta))>0.5,1,0)
+    print(p)
+    
 
     return p

@@ -9,6 +9,10 @@ def sigmoid(z):
     #                vector or scalar
     #
     # Hint : Do not import math
-
+    g = 1/(1+np.power(np.e,-z))
 
     return g
+
+# print(sigmoid(np.array([0])))
+# print(sigmoid(np.array([10000])))
+# print(sigmoid(np.array([-100])))

@@ -16,5 +16,13 @@ def cost_function(theta, X, y):
 
 
     # ===========================================================
-
+    #y = y.reshape((m,1))
+    h = sigmoid(np.matmul(X,theta))
+    #h = h.reshape((h.size,1))
+    #print(h)
+    cost = (np.matmul((-y).T,np.log(h)) - np.matmul((np.add(-y,1)).T,np.log(np.add(-h,1))))/m
+    #print(cost)
+    #print(np.subtract(h,y).shape)
+    grad = np.matmul((np.subtract(h,y)).T,X)/m
+    #print(grad)
     return cost, grad
